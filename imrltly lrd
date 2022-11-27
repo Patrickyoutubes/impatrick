@@ -90,7 +90,7 @@ sick.Parent = Torso
 sick:Play()
 sick.Volume = 8.2
 sick.Pitch = 1
-sick.SoundId = "rbxassetid://6049110238"
+sick.SoundId = ""
 sick.Name = "Dead"
 sick.Looped = true
 IT = Instance.new
@@ -481,7 +481,7 @@ function CreateSound(ID, PARENT, VOLUME, PITCH, DOESLOOP)
 		NEWSOUND.SoundId = "http://www.roblox.com/asset/?id="..ID
 		NEWSOUND:play()
 		if DOESLOOP == true then
-			NEWSOUND.Looped = true
+			NEWSOUND.Looped = false
 		else
 			repeat wait(1) until NEWSOUND.Playing == false or NEWSOUND.Parent ~= PARENT
 			NEWSOUND:remove()
